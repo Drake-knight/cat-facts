@@ -1,0 +1,40 @@
+ 
+ .heading{
+    text-align: center;
+}
+
+#fact-container{
+    margin: 30px;
+   
+    font-size: x-large;
+    border-style: double;
+    border-radius: 10px;
+    border-color: black;
+    padding: 30px;
+    
+} 
+
+body{
+    display: flex;
+   
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ #fetch-button{
+  
+    width: 150px;
+    font-size: 19px;
+    display: block;
+  margin: 0 auto;
+  background-color: aquamarine;
+  border-radius: 20px;
+
+  
+
+}
+
+#fetch-button:hover{
+    background-color: azure;
+    
+}
