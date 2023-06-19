@@ -1,5 +1,6 @@
  let buttonClick = document.getElementById('fetch-button');
 let factArea = document.getElementById('fact-container');
+let removeButton = document.getElementById('remove-button');
 
 
 const getFact = async ()=>{
@@ -21,6 +22,17 @@ const clickafter = ()=>{
     })
 }
 buttonClick.addEventListener('click',clickafter);
+
+
+
+
+const clearBox = ()=>{
+    factArea.textContent = '';
+}
+
+
+
+removeButton.addEventListener('click',clearBox);
 
 
 

@@ -29,10 +29,17 @@ body{
   margin: 0 auto;
   background-color: aquamarine;
   border-radius: 20px;
-
-  
-
 }
+
+#remove-button{
+    width: 150px;
+    font-size: 19px;
+    display: block;
+  margin: 0 auto;
+  background-color: rgb(216, 87, 87);
+  border-radius: 20px;
+
+  }
 
 #fetch-button:hover{
     background-color: azure;
