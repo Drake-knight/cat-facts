@@ -5,7 +5,7 @@
       const getFact = async ()=>{
 
         try{
-        const response = await fetch('https://cat-fact.herokuapp.com/facts/rando');
+        const response = await fetch('https://cat-fact.herokuapp.com/facts/random');
 
         if (response.status !== 200) {
             throw new Error('cannot fetch data');
