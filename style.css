@@ -4,17 +4,22 @@
 }
 
 #fact-container{
-    margin: 30px;
+    margin: 0px 200px 20px 200px;
    
     font-size: x-large;
-    border-style: double;
+    border-style: ridge;
     border-radius: 10px;
     border-color: black;
-    padding: 30px;
+    padding: 80px 30px 80px 30px;
+    text-align: center;
+    background-color: rgb(245, 241, 234);
+    display: block;
+    
     
 } 
 
 body{
+  background-color: blanchedalmond;
     display: flex;
    
     flex-direction: column;
@@ -44,4 +49,8 @@ body{
 #fetch-button:hover{
     background-color: azure;
     
+}
+#remove-button:hover{
+  background-color: azure;
+  
 }
