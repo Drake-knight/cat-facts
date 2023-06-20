@@ -1,41 +1,31 @@
- let buttonClick = document.getElementById('fetch-button');
-let factArea = document.getElementById('fact-container');
-let removeButton = document.getElementById('remove-button');
+    let buttonClick = document.getElementById('fetch-button');
+    let factArea = document.getElementById('fact-container');
+    let removeButton = document.getElementById('remove-button');
 
+    const getFact = async ()=>{
 
-const getFact = async ()=>{
+        const response = await fetch('https://cat-fact.herokuapp.com/facts/random');
 
-    const response = await fetch('https://cat-fact.herokuapp.com/facts/random');
+        if (response.status !== 200) {
+            throw new Error('cannot fetch data');
+        }
+        const data = await response.json();
+         return data;
+      };
 
-    if(response.status !== 200){
-        throw new Error('cannot fetch data');
-    } 
-    const data = await response.json();
-    factArea.textContent = data.text;
-}   
+    buttonClick.addEventListener('click', ()=>{
+        getFact().then(data =>{
+            factArea.textContent = data.text;
+        }).catch(err=>{
+            factArea.textContent = err.message;
+        })
+            
+        
+    });
 
+    
 
-const clickafter = ()=>{
-    getFact().catch(err=>{
-   
-        factArea.textContent = err.message;
-    })
-}
-buttonClick.addEventListener('click',clickafter);
-
-
-
-
-const clearBox = ()=>{
-    factArea.textContent = '';
-}
-
-
-
-removeButton.addEventListener('click',clearBox);
-
-
-
-
-
-
+    const clearBox = ()=>{
+        factArea.textContent = '';
+    }
+    removeButton.addEventListener('click',clearBox);
